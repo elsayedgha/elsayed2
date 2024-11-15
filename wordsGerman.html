@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كلمات ألمانية مع الترجمة والنطق</title>
+    <link rel="stylesheet" href="wordsGerman.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>كلمات ألمانية مع الترجمة والنطق</h1>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>الكلمة الألمانية</th>
+                    <th>الترجمة العربية</th>
+                    <th>الجملة</th>
+                    <th>النطق</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Haus</td>
+                    <td>منزل</td>
+                    <td>Ich wohne in einem Haus.</td>
+                    <td><button onclick="playAudio('haus')">استماع</button></td>
+                </tr>
+                <tr>
+                    <td>Auto</td>
+                    <td>سيارة</td>
+                    <td>Ich fahre mit dem Auto zur Arbeit.</td>
+                    <td><button onclick="playAudio('auto')">استماع</button></td>
+                </tr>
+                <tr>
+                    <td>Buch</td>
+                    <td>كتاب</td>
+                    <td>Ich lese ein interessantes Buch.</td>
+                    <td><button onclick="playAudio('buch')">استماع</button></td>
+                </tr>
+                <tr>
+                    <td>Apfel</td>
+                    <td>تفاحة</td>
+                    <td>Ich esse einen Apfel.</td>
+                    <td><button onclick="playAudio('apfel')">استماع</button></td>
+                </tr>
+                <tr>
+                    <td>Hund</td>
+                    <td>كلب</td>
+                    <td>Der Hund läuft im Park.</td>
+                    <td><button onclick="playAudio('hund')">استماع</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <audio id="audio-haus" src="haus.mp3"></audio>
+        <audio id="audio-auto" src="auto.mp3"></audio>
+        <audio id="audio-buch" src="buch.mp3"></audio>
+        <audio id="audio-apfel" src="apfel.mp3"></audio>
+        <audio id="audio-hund" src="hund.mp3"></audio>
+    </div>
+
+    <script>
+        function playAudio(word) {
+            const audioElement = document.getElementById(`audio-${word}`);
+            audioElement.play();
+        }
+    </script>
+
+</body>
+</html>
